@@ -38,8 +38,10 @@ public class Jugador {
     public void setHoraPartida() {
         this.horaPartida = LocalTime.now();
     }
-    public static void main(String[] args) {
-        Jugador jugador = new Jugador();
-
+    @Override
+    public String toString() {
+        return "Jugador [nombre=" + nombre + ", arma=" + arma + ", habitacion=" + habitacion + ", horaPartida="
+                + horaPartida + "]";
     }   
+       
 }
