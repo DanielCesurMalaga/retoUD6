@@ -5,19 +5,19 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Cluedo {
+    // atributos de clase
+    static String[] personajesArray = { "Amapola", "Celeste", "Prado", "Mora", "Rubio", "Blanco" }; // 6 elementos
+    static String[] armasArray = { "bate", "pistola", "candelabro", "cuchillo", "cuerda", "hacha", "pesa", "veneno",
+            "trofeo" }; // 9 elementos
+    static String[] habitacionesArray = { "casa de invitados", "teatro", "spa", "observatorio", "comedor", "terraza",
+            "salon", "cocina", "vestibulo" }; // 9 elementos
+    static List<Jugador> estadosJugador = new ArrayList<Jugador>();
+    static Jugador jugador;
+
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-
-        String[] personajesArray = { "Amapola", "Celeste", "Prado", "Mora", "Rubio", "Blanco" }; // 6 elementos
-        String[] armasArray = { "bate", "pistola", "candelabro", "cuchillo", "cuerda", "hacha", "pesa", "veneno",
-                "trofeo" }; // 9 elementos
-        String[] habitacionesArray = { "casa de invitados", "teatro", "spa", "observatorio", "comedor", "terraza",
-                "salon", "cocina", "vestibulo" }; // 9 elementos
-
-        Jugador jugador;
-        List<Jugador> estadosJugador = new ArrayList<Jugador>();
-
+/* 
         // inicio de la aplicación.
         System.out.println("Bienvenido a CLUEDO");
         System.out.println("este programa se encarga de barajar las cartas de forma aleatoria para jugar al Cluedo.");
@@ -53,60 +53,64 @@ public class Cluedo {
                     num = teclado.nextInt();
                     personajesArray = actualizarArray(personajesArray, num);
                     teclado.nextLine(); // limpio buffer de teclado.
-                    for (int i = personajesArray.length-num; i < personajesArray.length; i++) {
+                    for (int i = personajesArray.length - num; i < personajesArray.length; i++) {
                         System.out.println("Introduce nombre del personaje: ");
                         introDato = teclado.nextLine();
-                        personajesArray[i]= introDato;                   
+                        personajesArray[i] = introDato;
                     }
                     // visualizo todos los datos del nuevo array
-                    System.out.println("Array de personajes actualizado: "+Arrays.toString(personajesArray));
+                    System.out.println("Array de personajes actualizado: " + Arrays.toString(personajesArray));
                     break;
 
                 case 2:
-                System.out.println("\n¿Cuántas armas quieres añadir: ?");
-                num = teclado.nextInt();
-                armasArray = actualizarArray(armasArray, num);
-                teclado.nextLine();
-                for (int i = armasArray.length-num; i < armasArray.length; i++) {
-                    System.out.println("Introduce nombre del arma: ");
-                    introDato = teclado.nextLine();
-                    armasArray[i]= introDato;                   
-                }
-                // visualizo todos los datos del nuevo array
-                System.out.println("Array de Armas actualizado: "+Arrays.toString(armasArray));
+                    System.out.println("\n¿Cuántas armas quieres añadir: ?");
+                    num = teclado.nextInt();
+                    armasArray = actualizarArray(armasArray, num);
+                    teclado.nextLine();
+                    for (int i = armasArray.length - num; i < armasArray.length; i++) {
+                        System.out.println("Introduce nombre del arma: ");
+                        introDato = teclado.nextLine();
+                        armasArray[i] = introDato;
+                    }
+                    // visualizo todos los datos del nuevo array
+                    System.out.println("Array de Armas actualizado: " + Arrays.toString(armasArray));
                     break;
                 case 3:
-                System.out.println("\n¿Cuántas habitaciones quieres añadir: ?");
-                num = teclado.nextInt();
-                habitacionesArray = actualizarArray(habitacionesArray, num);
-                teclado.nextLine();
-                for (int i = habitacionesArray.length-num; i < habitacionesArray.length; i++) {
-                    System.out.println("Introduce nombre de la habitación: ");
-                    introDato = teclado.nextLine();
-                    habitacionesArray[i]= introDato;                   
-                }
-                // visualizo todos los datos del nuevo array
-                System.out.println("Array de Habitaciones actualizado: "+Arrays.toString(habitacionesArray));
+                    System.out.println("\n¿Cuántas habitaciones quieres añadir: ?");
+                    num = teclado.nextInt();
+                    habitacionesArray = actualizarArray(habitacionesArray, num);
+                    teclado.nextLine();
+                    for (int i = habitacionesArray.length - num; i < habitacionesArray.length; i++) {
+                        System.out.println("Introduce nombre de la habitación: ");
+                        introDato = teclado.nextLine();
+                        habitacionesArray[i] = introDato;
+                    }
+                    // visualizo todos los datos del nuevo array
+                    System.out.println("Array de Habitaciones actualizado: " + Arrays.toString(habitacionesArray));
                     break;
                 case 4:
                     System.out.println("¡Genial, sigamos...!");
                     break;
 
                 default:
-                System.out.println("Introduce opción correcta. Pringao!");
+                    System.out.println("Introduce opción correcta. Pringao!");
                     break;
             }
 
         } while (resp != 4);
         System.out.println("..Barajando Cartas...");
+*/
+        /*
+         * 4. Se informa al usuario de que se va a producir la baraja de las cartas,
+         * para ello se llama a un método que se encarga de barajar (ver aclaración
+         * sobre barajar cartas)
+         * y almacenar el personaje, arma, habitación y hora como objeto de la lista
+         * dinámica que hemos
+         * creado anteriormente para este fin. Este método devolverá true o false en
+         * caso de que se haya
+         * podido o no hacer dicha operación (controla excepciones).
+         */
 
-        /*4. Se informa al usuario de que se va a producir la baraja de las cartas, 
-        para ello se llama a un método que se encarga de barajar (ver aclaración sobre barajar cartas) 
-        y almacenar el personaje, arma, habitación y hora como objeto de la lista dinámica que hemos 
-        creado anteriormente para este fin. Este método devolverá true o false en caso de que se haya 
-        podido o no hacer dicha operación (controla excepciones). */
-        
-        
         /*
          * for (int i = 0; i < 5; i++) {
          * jugador = new Jugador();
@@ -126,12 +130,18 @@ public class Cluedo {
          * for (int i = 0; i < armasArray.length; i++) {
          * System.out.println(armasArray[i]);
          * }
-         
-        System.out.println(Arrays.toString(personajesArray));
-        System.out.println(Arrays.toString(armasArray));
-        System.out.println(Arrays.toString(habitacionesArray));
-        */
+         * 
+         * System.out.println(Arrays.toString(personajesArray));
+         * System.out.println(Arrays.toString(armasArray));
+         * System.out.println(Arrays.toString(habitacionesArray));
+         */
 
+         for (int i = 0; i < 5; i++) {
+            barajar();  
+         }
+         for (int i = 0; i < 5; i++) {
+            System.out.println(estadosJugador.get(i));
+         }
 
         teclado.close();
     } // fin main
@@ -142,16 +152,46 @@ public class Cluedo {
         return arrayNuevo;
     }
 
-    public static boolean barajar(String[] armasArray, String[] personajeArray){
-        /*un método que se encarga de barajar (ver aclaración sobre barajar cartas) 
-        y almacenar el personaje, arma, habitación y hora como objeto de la lista dinámica que hemos 
-        creado anteriormente para este fin. Este método devolverá true o false en caso de que se haya 
-        podido o no hacer dicha operación (controla excepciones).   */
-        // generar tres números aleatorios, uno por cada array y seleccionar el elem de la posición dada.
+    public static boolean barajar() {
+        /*
+         * un método que se encarga de barajar (ver aclaración sobre barajar cartas)
+         * y almacenar el personaje, arma, habitación y hora como objeto de la lista
+         * dinámica que hemos
+         * creado anteriormente para este fin. Este método devolverá true o false en
+         * caso de que se haya
+         * podido o no hacer dicha operación (controla excepciones).
+         */
+
+        // generar tres números aleatorios, uno por cada array y seleccionar el elem de
+        // la posición dada.
+
+        // Generamos las posiciones aleatorias.
         Random aleatorio = new Random();
         int posArma, posPersonaje, posHabitacion;
         posArma = aleatorio.nextInt(armasArray.length);
-        return true;
+        posPersonaje = aleatorio.nextInt(personajesArray.length);
+        posHabitacion = aleatorio.nextInt(habitacionesArray.length);
+
+        // instanciamos o inicializamos de nuevo al jugador e introducimos los valores
+        // de las posiciones dadas
+        try {
+            jugador = new Jugador();
+            jugador.setArma(armasArray[posArma]);
+            jugador.setHabitacion(habitacionesArray[posHabitacion]);
+            jugador.setNombre(personajesArray[posPersonaje]);
+            jugador.setHoraPartida();
+
+            // introducimos en la lista de estados el jugador generado y ya relleno.
+            estadosJugador.add(jugador);
+
+            return true;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+            return false;
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            return false;
+        }
     }
 
 } // cluedo
