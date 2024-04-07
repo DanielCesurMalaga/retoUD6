@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.time.LocalTime;
 
-public class Jugador {
+public class Jugador implements Serializable {
     // atributos
     private String nombre;
     private String arma;
